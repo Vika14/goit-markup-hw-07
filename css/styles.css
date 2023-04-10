@@ -327,6 +327,10 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link-contacts {
+  color: var(--pressed-state);
+}
+
 .mob-menu-link:hover,
 .mob-menu-link:focus {
   color: var(--pressed-state);
@@ -365,7 +369,7 @@ p {
 
 .mob-menu-social-items {
   display: flex;
-  justify-content: space-between;
+
   gap: 24px;
   list-style: none;
   margin-top: 8px;
@@ -473,8 +477,8 @@ p {
 
 .container {
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -669,9 +673,10 @@ p {
 
 .customers-link {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  width: 168px;
+  width: 190px;
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -838,14 +843,13 @@ p {
   width: auto;
   text-align: center;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+
   display: flex;
   flex-wrap: wrap;
 }
 
 .modal {
-  width: 408px;
+  width: 392px;
   min-height: 584px;
   background-color: var(--white);
   border-radius: 4px;
@@ -1056,7 +1060,7 @@ p {
   }
 
   .customers > .container {
-    width: 396px;
+    width: 428px;
   }
 
   .customers-item {
@@ -1074,7 +1078,9 @@ p {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 736px;
+    width: 768px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .top-nav {
@@ -1162,9 +1168,9 @@ p {
   .address-link {
     display: block;
     padding-top: 0;
-    padding-bottom: 6px;
+    margin-bottom: 12px;
     color: var(--body-text);
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -1173,12 +1179,12 @@ p {
   }
 
   .tab-tel {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
-  .tab-mail {
+  /* .tab-mail {
     padding-top: 16px;
-  }
+  } */
 
   .nav-link:hover,
   .nav-link:focus {
@@ -1268,16 +1274,22 @@ p {
   .customers-item {
     width: calc((100% - 48px) / 3);
   }
+
+  .customers-link {
+    width: 168px;
+  }
   .footer > .container {
     width: 582px;
+    gap: 72px 24px;
   }
 
   .footer-cont {
     max-width: 268px;
     margin-left: 0;
-    margin-right: 24px;
+    margin-right: 0;
     text-align: left;
     padding: 0;
+    margin-bottom: 0;
   }
 
   .footer-mail {
@@ -1295,11 +1307,15 @@ p {
     margin-right: 0;
     display: block;
   }
+
+  .modal {
+    width: 408px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1128px;
+    width: 1158px;
   }
 
   .auth {
@@ -1311,8 +1327,11 @@ p {
   }
 
   .address-link {
+    display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    margin: 0;
+    font-size: 16px;
   }
 
   .address-link:hover,
@@ -1421,7 +1440,7 @@ p {
   }
 
   .customers > .container {
-    width: 1128px;
+    width: 1158px;
   }
 
   .customers-items {
@@ -1432,6 +1451,7 @@ p {
 
   .footer > .container {
     width: 1128px;
+    gap: 0;
   }
 
   .footer {
@@ -1447,5 +1467,13 @@ p {
 
   .footer-cont:not(:last-child) {
     margin-right: 80px;
+  }
+
+  .footer-form {
+    width: auto;
+    text-align: left;
+    justify-content: center;
+
+    display: block;
   }
 }
