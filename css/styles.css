@@ -344,6 +344,7 @@ p {
   padding-left: 0;
   list-style: none;
   text-decoration: none;
+  margin: 0;
 }
 
 .mob-menu-address-link {
@@ -372,7 +373,8 @@ p {
 
   gap: 24px;
   list-style: none;
-  margin-top: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 .mob-menu-social {
@@ -849,7 +851,7 @@ p {
 }
 
 .modal {
-  width: 392px;
+  width: 320px;
   min-height: 584px;
   background-color: var(--white);
   border-radius: 4px;
@@ -980,20 +982,24 @@ p {
 }
 
 .check-text {
-  display: flex;
-  gap: 8px;
+  display: block;
+  /* gap: 8px; */
   font-size: 12px;
   margin-top: 16px;
   margin-bottom: 24px;
   align-items: center;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
 }
 
 .check-text span {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1.25px solid var(--headings-text);
   border-radius: 2px;
-  display: flex;
+
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -1311,11 +1317,22 @@ p {
   .modal {
     width: 408px;
   }
+
+  .check-text {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .auth {
@@ -1446,7 +1463,11 @@ p {
   .customers-items {
     flex-wrap: nowrap;
 
-    gap: 16px;
+    gap: 24px;
+  }
+
+  .customers-item {
+    width: calc((100% - 120px) / 6);
   }
 
   .footer > .container {
